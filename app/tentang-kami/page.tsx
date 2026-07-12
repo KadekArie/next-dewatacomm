@@ -27,17 +27,17 @@ export default function AboutUs(): React.JSX.Element {
               </p>
             </div>
 
-            {/* Sisi Kanan: Foto Fisik Toko */}
-            <div className="about-image-column" style={{ flex: 0.8, width: '100%', height: '380px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--deep-steel)' }}>
-              <div 
+            {/* SOLUSI PERBAIKAN: Mengganti div background-image menjadi tag <img> murni */}
+            <div className="about-image-column" style={{ flex: 0.8, width: '100%', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--deep-steel)', display: 'block' }}>
+              <img 
+                src="/dewatacomm-location.webp" 
+                alt="Foto Fisik Toko Dewatacomm" 
                 style={{ 
                   width: '100%', 
-                  height: '100%', 
-                  backgroundImage: 'url(/dewatacomm-location.webp)', 
-                  backgroundPosition: 'center center', 
-                  backgroundRepeat: 'no-repeat', 
-                  backgroundSize: 'cover' 
-                }}
+                  height: '380px', 
+                  objectFit: 'cover', 
+                  display: 'block' 
+                }} 
               />
             </div>
 
@@ -92,7 +92,7 @@ export default function AboutUs(): React.JSX.Element {
 
           </div>
 
-          {/* SEKSI 3: MERCHANDISE BANNER / CALL TO ACTION (LOKASI OFFLINE) */}
+          {/* SEKSI 3: MERCHANDISE BANNER */}
           <div style={{ backgroundColor: '#fcfcfc', border: '1px solid var(--deep-steel)', borderRadius: '16px', padding: '40px', textAlign: 'center', marginBottom: '30px' }}>
             <h3 style={{ color: 'var(--primary-blue)', fontSize: '22px', fontWeight: '800', margin: '0 0 10px 0' }}>Siap Mengunjungi Toko Kami?</h3>
             <p style={{ color: 'var(--slate)', fontSize: '15px', maxWidth: '600px', margin: '0 auto 25px auto', lineHeight: '1.6' }}>
@@ -120,7 +120,7 @@ export default function AboutUs(): React.JSX.Element {
             </a>
           </div>
 
-          {/* SEKSI NEW 4: INFO BANNER TOKO ONLINE (MARKETPLACE) */}
+          {/* SEKSI 4: INFO BANNER TOKO ONLINE */}
           <div style={{ backgroundColor: '#fcfcfc', border: '1px solid var(--deep-steel)', borderRadius: '16px', padding: '40px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--primary-blue)', fontSize: '22px', fontWeight: '800', margin: '0 0 10px 0' }}>Lebih Nyaman Belanja dari Rumah?</h3>
             <p style={{ color: 'var(--slate)', fontSize: '15px', maxWidth: '600px', margin: '0 auto 25px auto', lineHeight: '1.6' }}>
@@ -159,16 +159,27 @@ export default function AboutUs(): React.JSX.Element {
         </div>
       </div>
 
-      {/* BERSIH: Seluruh deklarasi transform translateY(-2px) di bawah ini telah dihapus */}
       <style>{`
         .btn-orange-hover:hover { background-color: transparent !important; color: var(--secondary-orange) !important; }
         .btn-trans-hover:hover { background-color: var(--secondary-orange) !important; color: #ffffff !important; }
         
         @media (max-width: 1024px) {
-          .about-profile-grid { flex-direction: column !important; gap: 40px !important; }
-          .about-text-column { text-align: center !important; }
-          .about-image-column { height: 260px !important; }
-          .about-pillars-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+          /* Membalik susunan baris agar gambar berada di atas teks cerita profil */
+          .about-profile-grid { 
+            flex-direction: column-reverse !important; 
+            gap: 32px !important; 
+          }
+          .about-text-column { 
+            text-align: center !important; 
+          }
+          /* Menurunkan tinggi batas gambar di mobile agar tetap proporsional */
+          .about-image-column img { 
+            height: 240px !important; 
+          }
+          .about-pillars-grid { 
+            grid-template-columns: 1fr !important; 
+            gap: 20px !important; 
+          }
         }
       `}</style>
     </>
