@@ -92,7 +92,7 @@ export default function OurServices(): React.JSX.Element {
                   style={{
                     display: 'inline-block', textAlign: 'center', backgroundColor: 'var(--secondary-orange)', color: '#ffffff',
                     border: '2px solid var(--secondary-orange)', textDecoration: 'none', fontWeight: '700', padding: '12px 28px',
-                    borderRadius: '50px', fontSize: '14px', letterSpacing: '0.5px'
+                    borderRadius: '50px', fontSize: '14px', letterSpacing: '0.5px', minWidth: '160px', boxSizing: 'border-box'
                   }}
                 >
                   SHOPEE
@@ -105,7 +105,7 @@ export default function OurServices(): React.JSX.Element {
                   style={{
                     display: 'inline-block', textAlign: 'center', backgroundColor: 'transparent', color: 'var(--secondary-orange)',
                     border: '2px solid var(--secondary-orange)', textDecoration: 'none', fontWeight: '700', padding: '12px 28px',
-                    borderRadius: '50px', fontSize: '14px', letterSpacing: '0.5px'
+                    borderRadius: '50px', fontSize: '14px', letterSpacing: '0.5px', minWidth: '160px', boxSizing: 'border-box'
                   }}
                 >
                   TOKOPEDIA
@@ -211,7 +211,6 @@ export default function OurServices(): React.JSX.Element {
         </div>
       </div>
 
-      {/* BERSIH: Seluruh deklarasi transform translateY(-2px) di bawah ini telah dihapus */}
       <style>{`
         .btn-orange-hover:hover { background-color: transparent !important; color: var(--secondary-orange) !important; }
         .btn-trans-hover:hover { background-color: var(--secondary-orange) !important; color: #ffffff !important; }
