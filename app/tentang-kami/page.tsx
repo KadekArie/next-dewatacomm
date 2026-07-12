@@ -100,6 +100,8 @@ export default function AboutUs(): React.JSX.Element {
             </p>
             <a 
               href="https://maps.app.goo.gl/2zLfZ3EYaESHh9rD6" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn-orange-hover"
               style={{ 
                 display: 'inline-block', 
