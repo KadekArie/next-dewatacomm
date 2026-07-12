@@ -275,7 +275,6 @@ export default function Home(): React.JSX.Element {
         .hero-background { background-image: url(/dewatacomm-home.webp); }
         .contact-placeholder-img { background-image: url(/dewatacomm-location.webp); }
         
-        /* BERSIH: Efek melayang transform: translateY(-2px) telah dihapus */
         .btn-shop-shopee:hover { background-color: transparent !important; color: var(--secondary-orange) !important; box-shadow: 0 6px 20px rgba(255, 104, 0, 0.1) !important; }
         .btn-shop-tokped:hover { background-color: var(--secondary-orange) !important; color: #ffffff !important; box-shadow: 0 6px 20px rgba(255, 104, 0, 0.2) !important; }
         
@@ -288,13 +287,19 @@ export default function Home(): React.JSX.Element {
 
         @media (max-width: 1024px) {
           .hero-background { background-image: url(/dewatacomm-home-mb.webp); background-position: center center; }
-          .contact-placeholder-img { background-image: url(/dewatacomm-location.webp); }
           .shop-container { flex-direction: column !important; text-align: center !important; gap: 35px !important; }
           .shop-text { text-align: center !important; }
           .shop-buttons { width: 100% !important; max-width: 320px !important; }
           .custom-services-grid { grid-template-columns: 1fr; gap: 20px; }
+          
+          /* MEMASTIKAN GAMBAR MUNCUL DI MOBILE */
           .contact-container { flex-direction: column !important; gap: 40px !important; }
-          .contact-image-wrapper { height: 280px !important; }
+          .contact-image-wrapper { 
+            display: block !important; 
+            width: 100% !important; 
+            height: 280px !important; 
+            flex: none !important; 
+          }
         }
       `}</style>
     </>
