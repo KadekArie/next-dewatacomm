@@ -141,7 +141,15 @@ export default function ContactUs(): React.JSX.Element {
 
         @media (max-width: 1024px) {
           .contact-page-wrapper { flex-direction: column !important; gap: 40px !important; }
-          .contact-image-wrapper { height: 280px !important; }
+          
+          /* MEMASTIKAN GAMBAR MUNCUL DI MOBILE */
+          .contact-image-wrapper { 
+            display: block !important; 
+            width: 100% !important; 
+            height: 280px !important; 
+            flex: none !important; 
+          }
+          
           .maps-responsive-container { height: 320px !important; border-radius: 8px; }
         }
       `}</style>
